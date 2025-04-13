@@ -6,3 +6,49 @@ date: "2025-04-03"
 
 # Meeting Notes for 04/01/2025
 
+## Limnology
+
+Def: *the study of the biological, chemical, and physical features of lakes and other bodies of fresh water.* 
+
+Related to the Meeting: "limits algae growth in inland waters" 
+
+## Theory of Limiting Factors 
+
+Online Blurb: In ecology, limiting factors are environmental variables that restrict the growth, abundance, or distribution of a population or ecosystem. These factors can be either biotic (living) or abiotic (non-living) and determine how many organisms can survive in a particular environment. Limiting factors play a crucial role in establishing an ecosystem's carrying capacity, which is the maximum population size an environment can sustain. 
+
+As it relates to inland waters, there tends to be a focus on the relationship between phosphate and algae growth, traditionally viewed as positively related. 
+
+Cannot directly measure algae growth, so research/analysis tends to use a proxy. 
+
+## Statistics
+
+There are three notable methods of analyzing lake samples: 
+
+Individual Observations, i.e., collection of observations where each "row" is a lake at a particular time (for a particular sample?)
+
+Seaonal Means: Aggregate data at the `lake`-`season` grain, each observation or "row" is a lake at a particular season of the year. 
+
+Overall Mean: Aggregate data at the `lake` level. Likely assumes that seasons have an equitable effect on lakes, e.g., there is not a "Lake Superior in the Winter Time unique effect"
+
+Depending on the aggregation level being considered, the data may exhibit a particular pattern. For limnology studies, we'd expect a positive relationship, but perhaps we'd experience a linear or non-linear relationship between the variables of interest. There is also the possibility of "Simpson's Paradox". A good place to assess this and further understand the historical precedence is in the Methods PhD Exam material Dr. Kaiser provided. 
+
+## Future-tense? 
+
+Allegedly, there is a historic database of Missouri lakes that have been intensively sampled over a period of 25+ years. That may provide a wealth of data of interest for analysis. 
+
+## Research  Question
+
+Still in the stages of development, but some rough sketches of a research question include: 
+
+*What are key characteristics of a lake? How might we be able to distinguish and group lakes into similar groups, and how might those intersect between ecological considerations and statistics, i.e., what are measurable features that we may expect to group lakes into heterogenous groups or be able to uniquely determine whether they're different from one another.* 
+
+*How might we be able to assess and maybe even recommend a particular sampling technique for lakes? What are beneficial features or characteristics of a "good" sampling framework for getting samples from lakes?*
+
+## Next Steps
+
+Primary: Review key literature provided by Dr. Kaiser, and identify related papers (likely ones cited by the former). 
+
+Secondary: Create a "Dictionary" of sorts to provide key terms and relationships and ideas found in Ecology and Statistics literature. 
+
+Tertiary: Come up with Questions/Ideas to discuss for next meeting with Dr. Kaiser. 
+
