@@ -1,6 +1,36 @@
 ---
-title: "KeyTerms"
+title: "Dictionary"
 output: pdf_document
-date: "2025-04-13"
 ---
 
+## Terms - Ecology 
+
+Chlorophyll-a (chl-a): a green pigment crucial for photosynthesis in plants, algae, and some bacteria. It is the primary pigment responsible for capturing light energy, converting it into chemical energy to produce sugars, and releasing oxygen.
+
+Used as a "surrogate for total phytoplankton biomass" 
+
+Total Phosphorus (TP): the sum of all phosphorus compounds present in a sample, including dissolved and particulate forms, both organic and inorganic.
+
+Eutrophication: the process where a water body, like a lake or river, becomes overly enriched with nutrients, especially phosphorus and nitrogen, leading to excessive growth of aquatic plants and algae. This overgrowth can deplete oxygen levels, harming or killing aquatic life. 
+
+Anoxia: (in waters) areas of sea water, fresh water, or groundwater that are depleted of dissolved oxygen. The opposite extreme of Hypoxia. 
+
+Hypoxia: when water has dissolved oxygen concentrations too low to support fish and other important animal species. Linked to eutrophication. 
+
+Trophic State: the level of nutrient enrichment and biological productivity in a lake, pond, or reservoir. 
+
+See [Carlson's Trophic State Index](https://en.wikipedia.org/wiki/Trophic_state_index#:~:text=The%20trophic%20state%20is%20defined,other%20water%20body's%20trophic%20status.)
+
+## Terms - Statistics 
+
+Detrend/de-seasonalize: 
+
+
+
+## Broad Topics
+
+NPS-FM: "Level of departure of a lake" 
+
+Water Sampling Protocols: 
+
+Lake Dynamics: 
