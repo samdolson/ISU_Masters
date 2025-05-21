@@ -1,0 +1,165 @@
+---
+title: "MayThoughts"
+output: html_document
+date: "2025-05-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reason for this Document
+
+Attempt to summarizes theory and empirical results on how data aggregation such as seasonal means in limnology relate to lake-specific characteristics ("lake identity") and how this (potentially) is realted to the concept of ergodicity (a hunch I have about where there may be juice to squeeze). 
+
+The goal of the research is, "to understand when seasonal means are both representative and a meaningful summary of lake-specific information" as well as "when their usage is problematic in the sense of leaving a substantial portion of variation unaccounted for".
+
+---
+
+## Concepts
+
+### 1. Aggregation and Residual Variance, Limnology
+
+Averaging lake data over time, such as using annual or seasonal means typically reduces residual variance and "inflates" (increases) correlation coefficients between variables of interest such as total phosphorus (TP) and chlorophyll-a (Chl). 
+
+A quote of interest:
+
+*“This practice of averaging away the extremes dampens the variable response in Chl per unit TP… nearly always improves its strength… but is partly a function of lake identity.”*  
+
+From: [**The Effects of Data Aggregation in Statistical Analysis**], 1976
+
+### 2. Lake Identity
+
+Site-specific appears to be the closest concept to "lake identity". Not only is a lake identity site-specific (lake-specific), but it is also a persistent and unique effect. Some eco terms of interest may include: morphometry/morphology and catchment features. The idea is that these features influence "nutrient–response relationships". 
+
+*“These grouping variables may be important in providing a substantive explanation of the population structure.”*  
+
+From: [**Steel & Holt (1996)**], p. 41
+
+---
+
+## 3. The Ecological Fallacy 
+
+Fittingly, given this is ecological statistics, there's the possibility of committing an Ecological Fallacy. In literature reviewed thus far, [**Liang et al. (2020)**], site-specific TP–Chl relationships can differ in direction and magnitude from regional relationships. 
+
+A quote of interest:
+
+*“Ecoregional relationship may misidentify limiting nutrient or miscalculate the nutrient effect direction or magnitude... Ecological fallacy existed in each ecoregion.”*  
+
+From: [**Liang et al. (2020)**]
+
+---
+
+## 4. Effects of Aggregation, Generally
+
+More to the point of statistics specifically, partial aggregation affects OLS estimators. What is "partial" remains to be detailed, but the idea is that this aggregation can:
+
+- Leads to "information loss" and introduce bias into the estimation 
+- Requires modification such as generalized least squares to "recover efficiency", or, improve variability
+
+A quote of interest:
+
+*“Aggregation... alters the appropriate least-squares estimator... GLS will thus be required to weight the means.”*  
+
+From: [**Feige & Watts (1972)**] 
+
+---
+
+## 5. Ergodicity 
+
+Ergodicity may be a helpful concept to explore. It is connected to "temporal stability" and is similar but different from "stationarity" in a time series context. 
+
+Reframing of the research question: 
+
+*Does a seasonal average for one lake accurately represent that lake's “character”?*
+
+Well, allegedly, if a lake is **non-ergodic**, then:
+- Its time mean may not equal the population mean
+- Aggregation may mask important temporal variation
+- **Seasonal means are insufficient for lake-level inference**
+
+---
+
+## Conclusion
+
+Overall thoughts of papers read thus far:
+
+- Aggregation increases correlation ($r^2$) by reducing residual variance (Jones 1998); generally taken as a "fact of life" is that seasonal means will improve your simple linear fit.
+- Site-specific is similar enough to the idea of a “lake identity”. 
+- Ignoring heterogeneity of individual observations can lead to ecological fallacy. This is a "classic pitfall" in the sense that individual observations don't always align with aggregated observations, and vice versa. 
+- I still think the idea of "ergodicity" could be helpful. It is related to stationarity but has a difference in meaning. There is also a variety of types of ergodicity to consider, but unfortunately there isn't clearly a "test of ergodicity" that comes to mind from initial research. Still, this could be a helpful concept and directly help answer the base research question. 
+
+I threw a big thing of my thoughts and some papers into ChatGPT and asked for thoughts on some "Possible Routes to Take": 
+
+This could be some nonsense, but a good thing to maybe work my way through to at least say I considered it. 
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, results='asis'}
+library(knitr)
+library(kableExtra)
+
+summary_table <- data.frame(
+  Method = c(
+    "Ergodicity",
+    "Stationarity",
+    "Variance decomposition / ICC",
+    "Mixed-effects modeling",
+    "CV / Ecological Stability",
+    "Space-for-time substitution",
+    "DTW / Time series similarity"
+  ),
+  `Checks for` = c(
+    "Time vs population representativeness",
+    "Time-invariance of moments",
+    "Relative importance of lake ID",
+    "Temporal vs spatial variance",
+    "Stability of behavior over time",
+    "Cross-sectional stand-in for trends",
+    "Recurrent temporal shape"
+  ),
+  `When Useful` = c(
+    "Theoretical rigor, long time series available",
+    "Preliminary check for mean-based summaries",
+    "To test lake identity stability",
+    "When analyzing multiple lakes over time",
+    "Ecological justification of using a mean",
+    "When longitudinal data is limited",
+    "Detecting structure beyond means"
+  )
+)
+
+kable(summary_table, format = "html", escape = FALSE, align = "lcc") %>%
+  kable_styling(full_width = FALSE, position = "left", bootstrap_options = c("striped", "hover"))
+```
+
+---
+
+## Further Readings Of Interest
+
+- **Steel & Holt (1996).** *International Statistical Review*  
+  *Analysing and Adjusting Aggregation Effects: The Ecological Fallacy Revisited*  
+  Stable URL: [https://www.jstor.org/stable/1403423](https://www.jstor.org/stable/1403423) :contentReference[oaicite:0]{index=0}
+
+- **Liang et al. (2020).** *Ecological Indicators*  
+  *Ecoregional or Site-specific Lake Nutrient Criteria? Evidence from Ecological Fallacy*  
+  DOI: [10.1016/j.ecolind.2019.105989](https://doi.org/10.1016/j.ecolind.2019.105989) :contentReference[oaicite:1]{index=1}
+
+- **Feige & Watts (1972).** *Econometrica*  
+  *Investigation of the Consequences of Partial Aggregation in Econometric Models*  
+  JSTOR: [https://www.jstor.org/stable/1909411](https://www.jstor.org/stable/1909411)
+
+- **Prais & Aitchison (1954).** *Review of the International Statistical Institute*  
+  *The Grouping of Observations in Regression Analysis*  
+  JSTOR: [https://www.jstor.org/stable/1401916](https://www.jstor.org/stable/1401916) :contentReference[oaicite:2]{index=2}
+
+- **Soranno et al. (2015).** *GigaScience*  
+  *Building a Multi-Scaled Geospatial Temporal Ecology Database from Disparate Data Sources*  
+  DOI: [10.1186/s13742-015-0067-4](https://doi.org/10.1186/s13742-015-0067-4) :contentReference[oaicite:3]{index=3}
+
+- **Cheruvelil et al. (2017).** *Ecology and Evolution*  
+  *Creating Multithemed Ecological Regions for Macroscale Ecology*  
+  DOI: [10.1002/ece3.2884](https://doi.org/10.1002/ece3.2884) :contentReference[oaicite:4]{index=4}
+
+- **Kratz et al. (2003).** *BioScience*  
+  *Ecological Variability in Space and Time: Insights Gained from the US LTER Program*  
+  URL: [https://academic.oup.com/bioscience/article/53/1/57/227159](https://academic.oup.com/bioscience/article/53/1/57/227159) :contentReference[oaicite:5]{index=5}
+

@@ -1,0 +1,14 @@
+---
+title: '4302025'
+output: pdf_document
+date: "2025-05-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Meeting Notes for 04/30/2025
+
+Note: These are summary notes compiled well into May (after-the-fact), and after the drafting of "May Thoughts". 
+
