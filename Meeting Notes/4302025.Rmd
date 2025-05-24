@@ -12,3 +12,33 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Note: These are summary notes compiled well into May (after-the-fact), and after the drafting of "May Thoughts". 
 
+## Notes
+
+### On Meeting
+
+Come up with sub-questions. The focus is on finding questions **that we can answer** and the **crieria used** to answer it. 
+
+With that in mind, some potential questions to further detail and answer: 
+
+  - What part of summer do we look at when constructing a seasonal mean, i.e., what part of summer tends to be the most stable across all lakes and years? 
+  
+  - What, generally, is a method to quantify the stability of a lake? 
+    - Well, variance, certainly, but need to be more specific. 
+    - Another method: Assess how "close" the weights (observations of a particular lake) are to zero (within a lake-seaon). 
+    - Maybe: Borrow the thresholds used for identify leverage/influential points? 
+
+### On Content
+
+"When is there something (measureable) that is characteristic of a lake?" $\rightarrow$ "How are trophic index levels defined, and is that criteria stable?" 
+
+"Seasonal means, in and of themselves, do not necessarily tell you much" $\rightarrow$ "What, beyond, X Lake at Y Year at Z Date(s) averaged log phosphate levels of ABC?" (the crux of the matter is generalizability) 
+
+Want to better understand "The mechanism of aggregation related to covariate/covariance" 
+
+We don't necessarily want the *optimal* solution, but we require a *principled* method/solution (optimal is ideal, but not reasonable for a start) 
+
+  - Think of Decision Theoretic Framework: Using principles, we can say this estimator has these properties and though the desirability of those properties may be disputed, it allows for a principled method of comparison, e.g., whether estimator X is more efficient than estimator Y 
+  
+An idea is getting a lake at a time when it doesn't have much variability (no upward/downward "drift" in a time series)
+
+"When a lake is stable, the seasonal mean of that lake is good to use, i.e., we'd posit that is an appropriate characteristic of the lake" 

@@ -8,11 +8,44 @@ date: "2025-05-21"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Later Thoughts , 5/24-
+
+After meeting with Dr. Nordman, the idea of testing for ergodicity seems to rely upon some rather "strong" assumptions. And perhaps focusing on covariance and weighting may be more worthwhile. This will be a lens of investigation after a more thorough literature review of papers "Of Interest". 
+
+## Reflection 
+
+
+
+## Thoughts on Papers 
+
+\newpage
+
+# Earlier Thoughts, 5/19-5/23 
+
+```{r}
+# Playing around
+x <- c(5, 6, 103, 1007, 1103)
+y <- c()
+for(i in 1:length(x)) {
+  rand <- runif(1, min = 0, max = 10)
+  y[i] <- x[i] + rand 
+}
+
+mean(log(x))
+log(mean(x))
+summary(lm(y ~ x))
+summary(lm(log(y) ~ log(x)))
+```
+
 ## Reason for this Document
 
 Attempt to summarizes theory and empirical results on how data aggregation such as seasonal means in limnology relate to lake-specific characteristics ("lake identity") and how this (potentially) is realted to the concept of ergodicity (a hunch I have about where there may be juice to squeeze). 
 
 The goal of the research is, "to understand when seasonal means are both representative and a meaningful summary of lake-specific information" as well as "when their usage is problematic in the sense of leaving a substantial portion of variation unaccounted for".
+
+## New Thought
+
+Also, consider the possible role of Jensen's Inequality, i.e., when we take the log, regardless of the aggregation, we know we are using a **concave** function to transform the underlying variables (both covariate and response). 
 
 ---
 
